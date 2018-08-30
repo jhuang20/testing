@@ -128,7 +128,7 @@
   }
 
   function createMyLocationChannel (name) {
-    var myLocationChannel = pusher.subscribe('' + name);
+    var myLocationChannel = pusher.subscribe('private-' + name);
     myLocationChannel.bind('pusher:subscription_succeeded', function() {
       // safe to now trigger events
       // use the watchPosition API to watch the changing location
