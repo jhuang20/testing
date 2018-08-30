@@ -79,7 +79,7 @@
     // if already present return
     if (deliveryHeroesLocationMap[deliveryHeroName]) return;
     if (deliveryHeroName) {
-      var deliveryHeroChannelName = 'private-' + deliveryHeroName;
+      var deliveryHeroChannelName = '' + deliveryHeroName;
       var deliveryHeroChannel = pusher.subscribe(deliveryHeroChannelName);
       deliveryHeroChannel.bind('client-location', function (nextLocation) {
         // first save the location
@@ -128,7 +128,7 @@
   }
 
   function createMyLocationChannel (name) {
-    var myLocationChannel = pusher.subscribe('private-' + name);
+    var myLocationChannel = pusher.subscribe('' + name);
     myLocationChannel.bind('pusher:subscription_succeeded', function() {
       // safe to now trigger events
       // use the watchPosition API to watch the changing location
