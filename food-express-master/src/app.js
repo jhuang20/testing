@@ -44,7 +44,7 @@
   // initialize pusher
   var pusher = new Pusher('4a61f6f5798b3dbb7ad7', {
     cluster: 'us2',
-    encrypted: true
+    encrypted: false
   });
 
   // add eventlisteners
