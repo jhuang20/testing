@@ -10,10 +10,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('./'));
 
 var pusher = new Pusher({
-  appId: 'INSERT_YOUR_APP_ID_HERE',
-  key: 'INSERT_YOUR_KEY_HERE',
-  secret:  'INSERT_YOUR_SECRET_HERE',
-  cluster: 'INSERT_PUSHER_CLUSTER_HERE'
+  appId: '589173',
+  key: '4a61f6f5798b3dbb7ad7',
+  secret:  '3898467a4b5df5c01951',
+  cluster: 'us2'
 });
 
 app.post('/pusher/auth', function(req, res) {
