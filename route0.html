@@ -35,7 +35,7 @@
     <div id="floating-panel">
     <b>Start: </b>
     <select id="start">
-      <option value="86th Street Station">UES</option>
+      <option value="1385 York Avenue">UES</option>
     </select>
     <b>End: </b>
     <select id="end">
@@ -48,7 +48,7 @@
         var directionsService = new google.maps.DirectionsService;
         var directionsDisplay = new google.maps.DirectionsRenderer;
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 11,
+          zoom: 14,
           center: {lat: 40.7128, lng: -74}
         });
         directionsDisplay.setMap(map);
