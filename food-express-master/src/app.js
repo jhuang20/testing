@@ -79,7 +79,7 @@
     // if already present return
     if (deliveryHeroesLocationMap[deliveryHeroName]) return;
     if (deliveryHeroName) {
-      var deliveryHeroChannelName = '' + deliveryHeroName;
+      var deliveryHeroChannelName = 'private-' + deliveryHeroName;
       var deliveryHeroChannel = pusher.subscribe(deliveryHeroChannelName);
       deliveryHeroChannel.bind('client-location', function (nextLocation) {
         // first save the location
